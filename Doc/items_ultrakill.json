@@ -1,0 +1,178 @@
+[
+  {
+    "id": "miroir",
+    "nom": "Miroir",
+    "description": "A fun tool to stare into the emptyness of your broken soul, or carbonize some ants, you do you buddy!",
+    "effet": "Renvoie les projectiles en tête chercheuse. Stackable avec Miroir Sans Teint.",
+    "notes_dev": "Nécessite un hook sur la gestion des projectiles entrants. Stackable.",
+    "auteur_note": null
+  },
+  {
+    "id": "miroir_sans_teint",
+    "nom": "Miroir Sans Teint",
+    "description": "you're ugly, but what are you exactly?",
+    "effet": "Double les projectiles renvoyés. Stack avec Miroir.",
+    "notes_dev": "Multiplicateur x2 sur les projectiles réfléchis par Miroir.",
+    "auteur_note": null
+  },
+  {
+    "id": "vaisselle_de_mariage",
+    "nom": "Vaisselle de Mariage",
+    "description": "BUY ME MORE JEWELLERY!",
+    "effet": "Transforme le clic gauche du shotgun bleu en lance-shrapnel en porcelaine.",
+    "notes_dev": "Modifier le comportement du tir principal du shotgun bleu (Pump Charge). Nouveau projectile : shrapnel porcelaine.",
+    "auteur_note": null
+  },
+  {
+    "id": "soda_quelconque",
+    "nom": "Soda Quelconque",
+    "description": "parodied in every videogame since the summer of 1952, Ahoy!",
+    "effet": "-5 HP, +5 vitesse de déplacement en slide.",
+    "notes_dev": "Modifier MaxHealth et la vitesse de slide du joueur.",
+    "auteur_note": null
+  },
+  {
+    "id": "gant_de_boxe",
+    "nom": "Gant de Boxe",
+    "description": "Truly a gentleman's sport, british or french? well you can solve this problem now",
+    "effet": "Améliore les dégâts du poing rouge. Changement de skin si possible.",
+    "notes_dev": "Hook sur les dégâts du Knuckleblaster (poing rouge). Skin optionnel à créer sur Blockbench.",
+    "auteur_note": null
+  },
+  {
+    "id": "punchin_balls",
+    "nom": "Punch'in'Balls",
+    "description": "?",
+    "effet": "Améliore la vitesse d'attaque du poing (le bleu, Feedbacker, qui peut renvoyer les projectiles).",
+    "notes_dev": "Hook sur la vitesse d'animation/cooldown du Feedbacker (poing bleu).",
+    "auteur_note": null
+  },
+  {
+    "id": "chapeau_loup_garou",
+    "nom": "Chapeau de Loup-Garou",
+    "description": "to cosplay your favorite sadistic redhead! 'Might create an obsession for skeletons and slavery'",
+    "effet": "x1.3 de sang généré. Stackable.",
+    "notes_dev": "Multiplicateur sur la quantité de sang droppée par les ennemis. Stack multiplicatif ou additif à définir.",
+    "auteur_note": "Lupusregina <3"
+  },
+  {
+    "id": "megaphone",
+    "nom": "Mégaphone",
+    "description": "According to U.S law, an angel is a high value target",
+    "effet": "Permet de mettre un débuff sur un ennemi en lui criant dessus (style perk Payday).",
+    "notes_dev": "Nouvelle mécanique : input dédié, raycast sur l'ennemi visé, application d'un debuff (à définir : ralentissement ? Vulnérabilité ?).",
+    "auteur_note": null
+  },
+  {
+    "id": "lance_armstrong",
+    "nom": "Lance-Armstrong",
+    "description": "most effective between 99' and 2005'",
+    "effet": "Lance blanche à pois rouges. Applique du poison aux ennemis via le poing rouge, en échange d'un buff de vitesse pour eux.",
+    "notes_dev": "Hook sur les hits du Knuckleblaster : appliquer DoT poison + buff de vitesse à l'ennemi touché. Skin : lance blanche à pois rouges.",
+    "auteur_note": "mdr"
+  },
+  {
+    "id": "tirelire_cochon",
+    "nom": "Tirelire Cochon",
+    "description": "Teach economics 101 to your children with this educational friend!",
+    "effet": "+1 stock de pièces pour le coin gun. Option : bruit insupportable de cochon activable.",
+    "notes_dev": "Modifier le max de pièces du Jackhammer/coin. Ajouter un son optionnel (configurable).",
+    "auteur_note": null
+  },
+  {
+    "id": "cracker_vert",
+    "nom": "Cracker Vert",
+    "description": "a strangely familiar taste",
+    "effet": "Augmente la régénération de vie par goutte de sang collectée.",
+    "notes_dev": "Multiplicateur sur le heal par sang. Réf. : Soleil Vert.",
+    "auteur_note": "va regarder la page wiki gros flemmard (Paul)"
+  },
+  {
+    "id": "saucisson_corse",
+    "nom": "Saucisson Corse",
+    "description": "also exist in arabic! Depending on the situation, wait no...",
+    "effet": "Donne un effet d'explosion AOE à un type de shotgun (à définir).",
+    "notes_dev": "Ajouter une explosion AoE au tir d'un des shotguns. Type de shotgun à choisir.",
+    "auteur_note": "so 2008 mais on assume"
+  },
+  {
+    "id": "coupure_pub",
+    "nom": "Coupure Pub",
+    "description": "Every capitalist fever dream!",
+    "effet": "x2 HP max. Spawn une pub chiante sur l'écran +1 toutes les 10 secondes. Une pub disparaît à chaque kill.",
+    "notes_dev": "Modifier MaxHealth x2. UI overlay avec des fausses pubs stackables. Hook sur les kills ennemis pour en retirer une. Réf. : FNAF Pizzeria Simulator.",
+    "auteur_note": null
+  },
+  {
+    "id": "livre",
+    "nom": "Livre",
+    "description": "Remaining text: I.R.R.E.LE.V.A.N.T",
+    "effet": "Item blague. Skin Bible optionnel. Affiche des quotes bibliques pendant le jeu.",
+    "notes_dev": "Item purement cosmétique/flavour. Ajouter des quotes en overlay ou dans les logs. Réf. : Apprend à lire!",
+    "auteur_note": null
+  },
+  {
+    "id": "petit_livre_rouge",
+    "nom": "Le Petit Livre Rouge",
+    "description": "i wonder what this book is about?",
+    "effet": "Instakill toute la vague. Se décompose après usage (consommable unique).",
+    "notes_dev": "Tuer tous les ennemis actifs de la salle. Item consommable : se supprime après utilisation.",
+    "auteur_note": "va regarder la page wiki gros flemmard (Paul)"
+  },
+  {
+    "id": "zaza",
+    "nom": "Zaza",
+    "description": "stir it up, like for real",
+    "effet": "Active un mode daltonien ou inversion des couleurs.",
+    "notes_dev": "Post-processing Unity : shader daltonien ou invert colors sur la caméra principale.",
+    "auteur_note": "lourd de fou"
+  },
+  {
+    "id": "seringue_sida",
+    "nom": "Seringue à Sida",
+    "description": "every 80's cinema worst nightmare",
+    "effet": "+50 HP instantané, -5 HP/sec pendant 10 secondes. Peut dépasser la limite de HP max.",
+    "notes_dev": "Heal immédiat qui ignore le cap de HP. Appliquer un DoT de 10 sec après. Attention à l'ordre d'application.",
+    "auteur_note": null
+  },
+  {
+    "id": "cookie_macadamia",
+    "nom": "Cookie Macadamia Blanc",
+    "description": "Orteil's Favorites!",
+    "effet": "Régénération de vie passive. Réduction de la vitesse au sol.",
+    "notes_dev": "Ticker de regen HP. Réduire la vitesse de déplacement au sol. Réf. : Orteil (dev de Cookie Clicker).",
+    "auteur_note": null
+  },
+  {
+    "id": "extincteur",
+    "nom": "Extincteur",
+    "description": "the must for every russian commuter, plant robot or scientist for cheap space travel",
+    "effet": "Augmente la vitesse aérienne.",
+    "notes_dev": "Modifier le multiplicateur de vitesse en air (dash, saut, etc.).",
+    "auteur_note": null
+  },
+  {
+    "id": "power_of_love",
+    "nom": "The Power of Love",
+    "description": "And this gun i found!",
+    "effet": "Attire les ennemis vers le joueur.",
+    "notes_dev": "Appliquer une force d'attraction sur tous les ennemis actifs vers la position du joueur. Réf. : Huey Lewis.",
+    "auteur_note": null
+  },
+  {
+    "id": "gangsta_gun",
+    "nom": "Gangsta Gun",
+    "description": "You're not any less of a man if you don't pull the trigger, you're not necessarily a man if you do",
+    "effet": "Améliore les dégâts au poing. Réduit les dégâts du pistolet.",
+    "notes_dev": "Multiplicateur positif sur les dégâts de poing, négatif sur le Revolver/Pistol.",
+    "auteur_note": null
+  },
+  {
+    "id": "saint_canard",
+    "nom": "Le Saint Canard",
+    "description": "??????",
+    "effet": "???",
+    "notes_dev": "À définir.",
+    "auteur_note": null
+  }
+]
