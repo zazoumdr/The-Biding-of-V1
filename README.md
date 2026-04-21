@@ -9,7 +9,7 @@ Requirements
 ULTRAKILL (Steam)
 r2modman
 Visual Studio 2022+ with .NET desktop development workload
-Unity 2019.4.40f1 (for map editing only)
+Unity 2019.4.40f1 (for map editing only) // needs not the right version
 
 
 Setting up the project
