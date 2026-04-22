@@ -14,7 +14,7 @@ Unity 2019.4.40f1 (for map editing only) // needs not the right version
 
 Setting up the project
 1. Clone the repo
-bashgit clone https://github.com/killi/The-Biding-of-V1.git
+bashgit clone https://github.com/killi/The-Binding-of-V1.git
 2. Install required mods via r2modman
 Create a profile for ULTRAKILL and install :
 
