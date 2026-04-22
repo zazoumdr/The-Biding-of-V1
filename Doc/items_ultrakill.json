@@ -1,17 +1,9 @@
 [
   {
-    "id": "miroir",
-    "nom": "Miroir",
-    "description": "A fun tool to stare into the emptyness of your broken soul, or carbonize some ants, you do you buddy!",
-    "effet": "Renvoie les projectiles en tête chercheuse. Stackable avec Miroir Sans Teint.",
-    "notes_dev": "Nécessite un hook sur la gestion des projectiles entrants. Stackable.",
-    "auteur_note": null
-  },
-  {
     "id": "miroir_sans_teint",
     "nom": "Miroir Sans Teint",
     "description": "you're ugly, but what are you exactly?",
-    "effet": "Double les projectiles renvoyés. Stack avec Miroir.",
+    "effet": "Double les projectiles renvoyés.",
     "notes_dev": "Multiplicateur x2 sur les projectiles réfléchis par Miroir.",
     "auteur_note": null
   },
@@ -27,8 +19,8 @@
     "id": "soda_quelconque",
     "nom": "Soda Quelconque",
     "description": "parodied in every videogame since the summer of 1952, Ahoy!",
-    "effet": "-5 HP, +5 vitesse de déplacement en slide.",
-    "notes_dev": "Modifier MaxHealth et la vitesse de slide du joueur.",
+    "effet": "-20 weapon cooldown, +50 vitesse de déplacement en slide.",
+    "notes_dev": "slurp".",
     "auteur_note": null
   },
   {
@@ -99,7 +91,7 @@
     "id": "coupure_pub",
     "nom": "Coupure Pub",
     "description": "Every capitalist fever dream!",
-    "effet": "x2 HP max. Spawn une pub chiante sur l'écran +1 toutes les 10 secondes. Une pub disparaît à chaque kill.",
+    "effet": "x2 HP max. Spawn une pub chiante sur l'écran +1 toutes les 10 secondes. doit lui mettre une patate pour la faire partir.",
     "notes_dev": "Modifier MaxHealth x2. UI overlay avec des fausses pubs stackables. Hook sur les kills ennemis pour en retirer une. Réf. : FNAF Pizzeria Simulator.",
     "auteur_note": null
   },
@@ -112,28 +104,12 @@
     "auteur_note": null
   },
   {
-    "id": "petit_livre_rouge",
-    "nom": "Le Petit Livre Rouge",
-    "description": "i wonder what this book is about?",
-    "effet": "Instakill toute la vague. Se décompose après usage (consommable unique).",
-    "notes_dev": "Tuer tous les ennemis actifs de la salle. Item consommable : se supprime après utilisation.",
-    "auteur_note": "va regarder la page wiki gros flemmard (Paul)"
-  },
-  {
     "id": "zaza",
     "nom": "Zaza",
     "description": "stir it up, like for real",
-    "effet": "Active un mode daltonien ou inversion des couleurs.",
+    "effet": "Active un mode daltonien ou inversion des couleurs et ralentit les balles des ennemies.",
     "notes_dev": "Post-processing Unity : shader daltonien ou invert colors sur la caméra principale.",
     "auteur_note": "lourd de fou"
-  },
-  {
-    "id": "seringue_sida",
-    "nom": "Seringue à Sida",
-    "description": "every 80's cinema worst nightmare",
-    "effet": "+50 HP instantané, -5 HP/sec pendant 10 secondes. Peut dépasser la limite de HP max.",
-    "notes_dev": "Heal immédiat qui ignore le cap de HP. Appliquer un DoT de 10 sec après. Attention à l'ordre d'application.",
-    "auteur_note": null
   },
   {
     "id": "cookie_macadamia",
@@ -149,7 +125,7 @@
     "description": "the must for every russian commuter, plant robot or scientist for cheap space travel",
     "effet": "Augmente la vitesse aérienne.",
     "notes_dev": "Modifier le multiplicateur de vitesse en air (dash, saut, etc.).",
-    "auteur_note": null
+    "auteur_note": "la vitesse de dash est calculé selon la vitesse au sol"
   },
   {
     "id": "power_of_love",
@@ -167,6 +143,15 @@
     "notes_dev": "Multiplicateur positif sur les dégâts de poing, négatif sur le Revolver/Pistol.",
     "auteur_note": null
   },
+  {
+    "id": "kitchen_gun",
+    "nom": "KITCHEN GUN",
+    "description": "",
+    "effet": "double de façon permanante les armes",
+    "notes_dev": "donner une orbe de dédoublement d'arme à durée illimité",
+    "auteur_note": null
+  },
+  
   {
     "id": "saint_canard",
     "nom": "Le Saint Canard",
