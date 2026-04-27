@@ -1,104 +1,151 @@
-# 🩸 Système de Progression & Spawn — ULTRAKILL Roguelike
+# 🩸 Progression & Spawn System — The Binding of V1
 
 ---
 
-## 🏗️ Structure d'un run
+## 🏗️ Run Structure
 
 ```
-Salle 1 → Salle 2 → Salle 3 → [BOSS] → Salle 4 → Salle 5 → Salle 6 → [BOSS] → ...
+Room 1 → Room 2 → Room 3 → [MINI-BOSS] → [SHOP] → [BOSS] → Next Floor...
 ```
 
-- Un **étage** = X salles normales + 1 salle de boss
-- Le boss drop **toujours** un item (garanti)
-- Nombre de salles par étage : à définir (suggestion : 3 à 5)
+- A **floor** = several combat rooms + 1 mini-boss + 1 item room + 1 shop + 1 boss
+- **3 floors per run** (fixed)
+- The boss always drops a **legendary item** (guaranteed)
+- The mini-boss always drops an **item** (guaranteed)
 
 ---
 
-## ⚙️ Système de difficulté
+## ⚙️ Difficulty System
 
-Deux variables évoluent en parallèle, basées sur **`room_index`** (numéro de salle depuis le début du run, commence à 0).
+Based on **`room_index`** (room number since the start of the run, starts at 0).
 
-### Quantité d'ennemis
+### Enemy count
 ```
-nb_ennemis = base + floor(room_index / 3)
+enemy_count = base + floor(room_index / 3)
 ```
-- `base` = 3 ou 4 ennemis
-- +1 ennemi toutes les 3 salles
+- `base` = 3 or 4 enemies
+- +1 enemy every 3 rooms
 
-### Force des ennemis — Pool de spawn
-La difficulté détermine quels ennemis peuvent apparaître.
-Plus `room_index` augmente, plus les tiers élevés se débloquent.
+### Enemy spawn pool — tier unlocks
+The higher the `room_index`, the stronger the enemies that can appear.
 
-| Tier | Ennemis | Se débloque à la salle |
+| Tier | Enemies | Unlocks at room |
 |---|---|---|
-| F | Filth, Strays, Schism | 0 (dès le début) |
-| C | Soldier, Drone | ~salle 5 |
-| B | Virtue, Stalker, Cerberus | ~salle 10 |
-| A | Ferryman, Mindflayer | ~salle 15 |
-| S | Hideous Mass, ennemis de boss | ~salle 20+ |
+| D | Filth, Strays | 0 (from the start) |
+| C | Schism, Soldier, Drone | ~room 5 |
+| B | Virtue, Stalker, Cerberus | ~room 10 |
+| A | Ferryman, Mindflayer | ~room 15 |
+| S | Hideous Mass, boss enemies | ~room 20+ |
+| Ultra | Custom boss enemies | Boss rooms only |
 
-> Les seuils exacts sont à calibrer pendant les tests.
+> Exact thresholds to be calibrated during playtesting.
 
 ---
 
-## 🎲 Système de drop d'items
+## 👾 Enemy Classes & Calculated Difficulty
 
-### Principe
-Chaque ennemi a un **tier** qui détermine sa chance de dropper un item et la rareté de cet item.
+Each enemy has a **base class** defined by the team (size, HP, overall difficulty).
 
-### Table de drop
+| Class | Soul value | Base difficulty |
+|---|---|---|
+| D | 5 souls | 0.5 |
+| C | 10 souls | 1 |
+| B | 25 souls | 1.5 |
+| A | 50 souls | 2 |
+| S | 100 souls | 3 |
+| Ultra | 200 souls | 5 |
 
-| Tier ennemi | Exemples | Chance de drop | Rareté item droppé |
+### Variants & calculated difficulty
+Enemies can spawn with variants that modify their calculated difficulty:
+- **Mega** → base difficulty +1
+- **Angry** → base difficulty +2
+- *Other variants to be defined*
+
+---
+
+## 🎲 Item Drop System
+
+### Principle
+Each enemy has a **class** that determines its drop chance and the rarity of the dropped item.
+
+Items are **not dropped during combat** — they are **rewards** given for completing:
+- A boss room (legendary item, guaranteed)
+- A mini-boss room (item guaranteed)
+- Occasionally a normal combat room
+
+### Drop table
+
+| Enemy tier | Examples | Drop chance | Item rarity |
 |---|---|---|---|
-| F | Filth, Strays | 15% | Commun |
-| C | Schism, Soldier | 10% | Peu commun |
+| D | Filth, Strays | 15% | Common |
+| C | Schism, Soldier | 10% | Uncommon |
 | B | Virtue, Stalker | 5% | Rare |
-| A | Ferryman, Mindflayer | 2% | Épique |
-| S | Hideous Mass, boss | 1% (boss = 100%) | Légendaire |
+| A | Ferryman, Mindflayer | 2% | Epic |
+| S / Boss | Hideous Mass, bosses | 1% (boss = 100%) | Legendary |
 
-### Règle de rareté
-- Un item **commun** peut apparaître dans tous les pools
-- Un item **rare** n'apparaît que dans les pools Rare, Épique et Légendaire
-- Un item **légendaire** n'apparaît que dans le pool Légendaire (boss uniquement)
+### Rarity rules
+- A **common** item can appear in all pools
+- A **rare** item only appears in Rare, Epic and Legendary pools
+- A **legendary** item only appears in the Legendary pool (boss only)
 
-### Pas de cap pour l'instant
-- Pas de limite de drops par salle
-- Pas de diminishing returns
-- Le snowball est volontairement possible — à réévaluer après les premiers tests
-
----
-
-## 📋 Rareté des items de la liste
-
-> À remplir au fur et à mesure
-
-| Item | Rareté suggérée | Justification |
-|---|---|---|
-| Soda Quelconque | Commun | Effet simple, bon item de départ |
-| Miroir | Peu commun | Mécanique intéressante mais pas abusée seule |
-| Miroir Sans Teint | Rare | Très fort en combo avec Miroir |
-| Chapeau de Loup-Garou | Commun | Stackable mais effet modéré |
-| Extincteur | Commun | Buff de mobilité simple |
-| Cookie Macadamia | Commun | Regen passive, tradeoff raisonnable |
-| Seringue à Sida | Rare | Burst HP potentiellement abusé |
-| Coupure Pub | Épique | x2 HP c'est énorme |
-| Petit Livre Rouge | Légendaire | Instakill toute la vague = win bouton |
-| Chèque en Blanc | Légendaire | Double tous les effets = game breaking |
-| Le Saint Canard | ??? | Mystère total |
+### No cap for now
+- No drop limit per room
+- No diminishing returns
+- Snowballing is intentionally allowed — to be reassessed after playtesting
 
 ---
 
-## 🔧 Notes d'implémentation
+## 💰 Soul System
 
-- Le `room_index` est la variable centrale — tout en dépend
-- Les pools de spawn sont des **listes pondérées** : plus un ennemi est fort, moins il a de poids dans le tirage
-- Le système de drop se hook sur **la mort de chaque ennemi**
-- Garder une seed par run pour pouvoir reproduire un run (debug + fun)
+### Formula
+```
+souls_earned = sum(enemy_flat_value) * style_multiplier
+```
+
+### Style multiplier
+
+| End of room rank | Multiplier |
+|---|---|
+| D | x0.5 |
+| C | x1 |
+| B | x1.5 |
+| A | x2 |
+| S | x3 |
+| SS / SSS | x4 |
 
 ---
 
-## 📅 À définir plus tard
-- Nombre exact de salles par étage
-- Seuils de déblocage des tiers ennemis (à calibrer aux tests)
-- Système de meta-progression entre les runs (débloquages permanents ?)
-- Est-ce qu'on garde le snowball ou on cap à terme
+## 📋 Item rarity reference
+
+| Item | Suggested rarity |
+|---|---|
+| Soda Quelconque | Common |
+| Miroir | Uncommon |
+| Miroir Sans Teint | Rare |
+| Chapeau de Loup-Garou | Common |
+| Extincteur | Common |
+| Cookie Macadamia | Common |
+| Seringue à Sida | Rare |
+| Coupure Pub | Epic |
+| Petit Livre Rouge | Legendary |
+| Chèque en Blanc | Legendary |
+| Le Saint Canard | ??? (secret) |
+
+---
+
+## 🔧 Implementation Notes
+
+- `room_index` is the central variable — everything depends on it
+- Spawn pools are **weighted lists**: the stronger the enemy, the lower its weight
+- The drop system hooks onto **each enemy's death**
+- Keep a **seed per run** to reproduce a run (debug + fun)
+
+---
+
+## 📅 To be defined later
+- Exact number of combat rooms per floor
+- Enemy tier unlock thresholds (to calibrate during tests)
+- Meta-progression system between runs (permanent unlocks?)
+- Whether to keep the snowball or cap it eventually
+- Complete enemy class table (which enemy belongs to which tier)
+- Additional enemy variants and their difficulty modifiers

@@ -1,122 +1,120 @@
-# 🩸 The Binding of V1 — Guide d'installation pour testeurs
+# 🩸 The Binding of V1 — Installation Guide for Testers
 
-> Pas besoin de savoir coder ! Suis les étapes dans l'ordre et ça marchera.
-
----
-
-## Ce dont tu as besoin
-
-- **ULTRAKILL** installé sur Steam
-- **Une connexion internet**
-- **~500 Mo d'espace disque libre**
+> No coding knowledge needed! Just follow the steps in order and it will work.
 
 ---
 
-## Étape 1 — Télécharger r2modman
+## What you need
 
-r2modman est un gestionnaire de mods. Il s'occupe de tout installer automatiquement à ta place.
-
-1. Va sur : https://thunderstore.io/package/ebkr/r2modman/
-2. Clique sur **"Manual Download"**
-
-> 📸 *[Capture d'écran : page Thunderstore avec le bouton Manual Download entouré en rouge]*
-
-3. Ouvre le fichier `.exe` téléchargé et installe le programme
-4. Si Windows affiche un avertissement de sécurité → clique sur **"Informations complémentaires"** puis **"Exécuter quand même"**
-
-> 📸 *[Capture d'écran : fenêtre d'avertissement Windows avec les boutons indiqués]*
+- **ULTRAKILL** installed on Steam
+- **An internet connection**
+- **~500 MB of free disk space**
 
 ---
 
-## Étape 2 — Configurer r2modman pour ULTRAKILL
+## Step 1 — Download r2modman
 
-1. Lance **r2modman**
-2. Dans la liste des jeux, cherche et clique sur **ULTRAKILL**
+r2modman is a mod manager. It handles everything automatically for you.
 
-> 📸 *[Capture d'écran : liste des jeux dans r2modman avec ULTRAKILL sélectionné]*
+1. Go to: https://thunderstore.io/package/ebkr/r2modman/
+2. Click **"Manual Download"**
 
-3. Clique sur **"Select game"**
-4. Clique sur **"Create new profile"**
-5. Donne-lui un nom (ex: `TheBindingOfV1`) et confirme
+> 📸 *[Screenshot: Thunderstore page with the Manual Download button highlighted in red]*
 
-> 📸 *[Capture d'écran : fenêtre de création de profil]*
+3. Open the downloaded `.exe` file and install the program
+4. If Windows shows a security warning → click **"More info"** then **"Run anyway"**
+
+> 📸 *[Screenshot: Windows security warning with the buttons indicated]*
 
 ---
 
-## Étape 3 — Installer les mods nécessaires
+## Step 2 — Configure r2modman for ULTRAKILL
 
-Tu dois installer 3 mods dans cet ordre.
+1. Launch **r2modman**
+2. In the game list, find and click on **ULTRAKILL**
+
+> 📸 *[Screenshot: r2modman game list with ULTRAKILL selected]*
+
+3. Click **"Select game"**
+4. Click **"Create new profile"**
+5. Give it a name (e.g. `TheBindingOfV1`) and confirm
+
+> 📸 *[Screenshot: profile creation window]*
+
+---
+
+## Step 3 — Install the required mods
+
+You need to install 3 mods in this order.
 
 ### 3.1 — BepInExPack
 
-1. Dans r2modman, clique sur **"Online"** dans le menu à gauche
-2. Dans la barre de recherche, tape `BepInExPack`
-3. Clique sur le mod **"BepInExPack"** par *BepInEx*
-4. Clique sur **"Download"** puis **"Install"**
+1. In r2modman, click **"Online"** in the left menu
+2. In the search bar, type `BepInExPack`
+3. Click on the mod **"BepInExPack"** by *BepInEx*
+4. Click **"Download"** then **"Install"**
 
-> 📸 *[Capture d'écran : recherche BepInExPack dans r2modman avec le bouton Download]*
+> 📸 *[Screenshot: BepInExPack search in r2modman with the Download button]*
 
 ### 3.2 — PluginConfigurator
 
-1. Dans la barre de recherche, tape `PluginConfigurator`
-2. Clique sur le mod **"PluginConfigurator"** par *EternalsTeam*
-3. Clique sur **"Download"** puis **"Install"**
+1. In the search bar, type `PluginConfigurator`
+2. Click on the mod **"PluginConfigurator"** by *EternalsTeam*
+3. Click **"Download"** then **"Install"**
 
-> 📸 *[Capture d'écran : recherche PluginConfigurator]*
+> 📸 *[Screenshot: PluginConfigurator search]*
 
 ### 3.3 — AngryLevelLoader
 
-1. Dans la barre de recherche, tape `AngryLevelLoader`
-2. Clique sur le mod **"AngryLevelLoader"** par *EternalsTeam*
-3. Clique sur **"Download"** puis **"Install"**
+1. In the search bar, type `AngryLevelLoader`
+2. Click on the mod **"AngryLevelLoader"** by *EternalsTeam*
+3. Click **"Download"** then **"Install"**
 
-> 📸 *[Capture d'écran : recherche AngryLevelLoader]*
+> 📸 *[Screenshot: AngryLevelLoader search]*
 
 ---
 
-## Étape 4 — Installer The Binding of V1
+## Step 4 — Install The Binding of V1
 
-1. Dans la barre de recherche, tape `TheBindingOfV1`
-2. Clique sur le mod et installe-le
+1. In the search bar, type `TheBindingOfV1`
+2. Click on the mod and install it
 
-> 📸 *[Capture d'écran : page du mod The Binding of V1]*
-
-> ⚠️ *Cette étape sera disponible une fois le mod publié sur Thunderstore. En attendant, demande au développeur le fichier `.dll` et place-le dans :*
+> ⚠️ *This step will be available once the mod is published on Thunderstore. In the meantime, ask the developer for the `.dll` file and place it in:*
 > `ULTRAKILL/BepInEx/plugins/`
 
 ---
 
-## Étape 5 — Lancer le jeu en mode moddé
+## Step 5 — Launch the game in modded mode
 
-> ⚠️ **Important** — Ne lance **pas** ULTRAKILL depuis Steam directement. Utilise toujours r2modman pour jouer avec les mods.
+> ⚠️ **Important** — Do **not** launch ULTRAKILL directly from Steam. Always use r2modman to play with mods.
 
-1. Dans r2modman, clique sur **"Start modded"** en haut à gauche
+1. In r2modman, click **"Start modded"** in the top left
 
-> 📸 *[Capture d'écran : bouton "Start modded" dans r2modman entouré en rouge]*
+> 📸 *[Screenshot: "Start modded" button in r2modman highlighted in red]*
 
-2. Le jeu se lance avec une fenêtre de console noire en arrière-plan — c'est normal, ne la ferme pas
-3. Dans le menu principal du jeu → **Settings → Plugin Config → Angry Level Loader**
-4. Clique sur **"Custom Levels"** pour accéder au mode roguelike
+2. The game launches with a black console window in the background — this is normal, do not close it
+3. In the game's main menu → **Settings → Plugin Config → Angry Level Loader**
+4. Click **"Custom Levels"** to access the roguelike mode
 
-> 📸 *[Capture d'écran : menu Plugin Config dans ULTRAKILL]*
-
----
-
-## ✅ C'est bon !
-
-Si tu vois le menu du mod, l'installation est réussie. Bonne session de test !
+> 📸 *[Screenshot: Plugin Config menu in ULTRAKILL]*
 
 ---
 
-## ❌ Quelque chose ne marche pas ?
+## ✅ All done!
 
-| Problème | Solution |
+If you can see the mod menu, the installation was successful. Enjoy your testing session!
+
+---
+
+## ❌ Something isn't working?
+
+| Problem | Solution |
 |---|---|
-| Le jeu ne se lance pas | Vérifie que les 3 mods sont bien installés dans r2modman |
-| La console noire se ferme immédiatement | Réinstalle BepInExPack |
-| Le mod n'apparaît pas dans Plugin Config | Vérifie que le fichier `.dll` est bien dans `BepInEx/plugins/` |
-| Autre problème | Contacte le développeur en décrivant ce qui s'est passé |
+| The game won't launch | Make sure all 3 mods are installed in r2modman |
+| The black console closes immediately | Reinstall BepInExPack |
+| The mod doesn't appear in Plugin Config | Make sure the `.dll` file is in `BepInEx/plugins/` |
+| Any other issue | Contact the developer and describe what happened |
 
 ---
 
-*Guide rédigé pour The Binding of V1 — version bêta testeurs*
+*Guide written for The Binding of V1 — beta testers version*
