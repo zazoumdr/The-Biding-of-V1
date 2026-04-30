@@ -19,8 +19,8 @@ namespace TheBindingOfV1.Generation
 
         [Header("Connections")]
         public Transform spawnPoint;
-        public DoorAnchor entranceDoor;
-        public List<DoorAnchor> exitDoors;
+        public Transform entranceDoor;
+        public List<Transform> exitDoors;
 
         [Header("Bounds")]
         public Vector3 dimensions;
